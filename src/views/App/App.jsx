@@ -1,9 +1,11 @@
 import React from 'react'
 import  './app.scss'
+import MainPage from '../components/MainPage/MainPage'
+
 
 const App = () => {
 return (
-<div className='Hello'>Леху в попку</div>
+<MainPage/>
 )
 }
 
