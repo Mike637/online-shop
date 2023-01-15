@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-
+const ESWebpackLintPlugin = require('eslint-webpack-plugin');
 module.exports = {
     entry:["@babel/polyfill","./src/index.jsx"],
     mode:"development",
@@ -14,7 +14,8 @@ resolve:{
 },
 plugins:[
 new HtmlWebpackPlugin({template:"./src/index.html"}),
-new CleanWebpackPlugin()
+new CleanWebpackPlugin(),
+new ESWebpackLintPlugin()
 ],
 module:{
     rules:
