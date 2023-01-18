@@ -1,20 +1,25 @@
 import React  from 'react'
 import  styles from "./header.module.scss"
+import cart from "./images/cart.png"
+
+console.log(cart)
+console.log("Hello world")
 
 const Header = () => {
 return (
    <header className={styles.header}>
+   <div className = {styles.header__container}>
 <div className = {styles.Logo}>
 Online-shop
 </div>
-<div className = "SearchPanel">
+<div className = {styles.searchPanel}>
 <form action="">
     <input type="text" />
-<input type="button" value="Click" />
 </form>
 </div>
-<div className="Cart">
-
+<div className={styles.cart}>
+<img src={cart}/>
+</div>
 </div>
    </header>
 )

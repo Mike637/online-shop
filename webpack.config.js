@@ -7,7 +7,13 @@ module.exports = {
     mode:"development",
     output:{
     path:path.resolve(__dirname,"dist"),
-    filename:"[name].[hash].js"
+    filename:"[name][hash].js",
+    assetModuleFilename:"[name][hash][ext]"
+},
+performance:{
+  hints:false,
+  maxAssetSize:512000,
+  maxEntrypointSize:512000
 },
 resolve:{
   extensions:['.json','.js','.jsx']
@@ -23,10 +29,6 @@ module:{
         {
             test:/\.(css|sass|scss)$/,
             use:['style-loader','css-loader','sass-loader']
-        },
-        {
-            test:/\.(jpg|jpeg|png)$/i,
-            use:['file-loader']
         },
         {
             test: /\.m?js$/,
@@ -48,7 +50,14 @@ module:{
               }
             }
           },
-
+          {
+            test: /\.(png|jpg|gif|ico|svg)$/,
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]',
+                context: ''
+            }
+        }
     ]
 },
 devServer:{
