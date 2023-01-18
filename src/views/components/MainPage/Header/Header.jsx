@@ -17,9 +17,13 @@ Online-shop
     <input type="text" />
 </form>
 </div>
+
 <div className={styles.cart}>
+<button>
 <img src={cart}/>
+</button>
 </div>
+
 </div>
    </header>
 )
