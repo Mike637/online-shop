@@ -9,18 +9,21 @@ const Header = () => {
 return (
    <header className={styles.header}>
    <div className = {styles.header__container}>
-<div className = {styles.Logo}>
+<div className = {styles.header__logo}>
 Online-shop
 </div>
-<div className = {styles.searchPanel}>
+<div className = {styles.header__searchPanel}>
 <form action="">
     <input type="text" />
 </form>
 </div>
 
-<div className={styles.cart}>
-<button>
+<div className={styles.header__cart}>
+<button className={styles.header__buttonCart}>
 <img src={cart}/>
+<div className={styles.header__quantityBlock}>
+<p className={styles.header__quatityNumber}>1</p>
+</div>
 </button>
 </div>
 

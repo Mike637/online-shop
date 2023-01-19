@@ -1,7 +1,7 @@
 
 .header
 {
-background-color:white;
+background-color:#00DDFF;
 position:fixed;
 left:0;
 top:0;
@@ -19,16 +19,45 @@ justify-content:space-between;
 padding:2%;
 }
 
-.cart
+.header__cart
 {
 width:4%;
+position:relative;
 img
 {
-    width:100%;
+width:100%;
+
+}
+.header__buttonCart
+{
+border:none;
+border-radius:5%;
+:hover
+{
+cursor:pointer;
+}
+:active
+{
+opacity:0.3;
+}
+
+.header__quantityBlock {
+position:absolute;
+background-color:red;
+width:40%;
+height:40%;
+border-radius:50%;
+top:0;
+left:60%;
+.header__quatityNumber
+{
+font-weight:bold
+}
+}
 }
 }
 
-.searchPanel
+.header__searchPanel
 {
 
 }
