@@ -21,8 +21,14 @@ padding:2%;
 
 .header__cart
 {
+
 width:4%;
 position:relative;
+padding:0 5%;
+:hover .header__popupHint
+{
+    display:block;
+}
 img
 {
 width:100%;
@@ -32,29 +38,43 @@ width:100%;
 {
 border:none;
 border-radius:5%;
+:active
+{
+opacity:0.3
+}
 :hover
 {
 cursor:pointer;
 }
-:active
-{
-opacity:0.3;
-}
+
+
 
 .header__quantityBlock {
 position:absolute;
 background-color:red;
-width:40%;
+width:10%;
 height:40%;
 border-radius:50%;
 top:0;
-left:60%;
+left:55%;
 .header__quatityNumber
 {
 font-weight:bold
 }
 }
 }
+/* this is popub hint styles
+.header__popupHint
+{
+    display:none;
+position:absolute;
+font-size:0.8em;
+border:2px solid blue;
+background-color:white;
+left:0;
+top:50px;
+}
+*/
 }
 
 .header__searchPanel

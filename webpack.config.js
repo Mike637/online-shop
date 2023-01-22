@@ -57,7 +57,18 @@ module:{
                 name: '[name].[ext]',
                 context: ''
             }
-        }
+        },
+{
+  test: /\.ttf$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: '[name][hash].[ext]',
+      },
+    },
+  ]
+}
     ]
 },
 devServer:{

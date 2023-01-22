@@ -2,8 +2,6 @@ import React  from 'react'
 import  styles from "./header.module.scss"
 import cart from "./images/cart.png"
 
-console.log(cart)
-console.log("Hello world")
 
 const Header = () => {
 return (
@@ -25,6 +23,12 @@ Online-shop
 <p className={styles.header__quatityNumber}>1</p>
 </div>
 </button>
+{/* this is a popub hint
+ <div className = {styles.header__popupHint}>
+<p>перейти в корзину</p>
+</div>   */}
+
+
 </div>
 
 </div>
