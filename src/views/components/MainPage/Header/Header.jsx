@@ -1,19 +1,31 @@
 import React  from 'react'
 import  styles from "./header.module.scss"
 import cart from "./images/cart.png"
-
+import search from "./images/search.png"
 
 const Header = () => {
 return (
    <header className={styles.header}>
    <div className = {styles.header__container}>
 <div className = {styles.header__logo}>
-Online-shop
+ Online store
 </div>
 <div className = {styles.header__searchPanel}>
-<form action="">
-    <input type="text" />
+
+<div className = {styles.header__searchPanelContainer}>
+   <p><form сlassName= {styles.header__searchForm} action="">
+   <input placeholder="search..." type="text"  className = {styles.header__searchArea}/>
+   <button className= {styles.header__buttonSearch}>Find</button>
+   </form></p>
+      </div>
+{ /*<div className = {styles.header__searchPanelContainer}>
+
+
+<form сlassName= {styles.header__searchForm} action="">
+<input type="text"  className = {styles.header__searchArea}/>
+<button className= {styles.header__buttonSearch}><img src={search}/></button>
 </form>
+</div> */ }
 </div>
 
 <div className={styles.header__cart}>
