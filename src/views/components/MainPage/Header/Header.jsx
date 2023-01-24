@@ -1,7 +1,6 @@
 import React  from 'react'
 import  styles from "./header.module.scss"
 import cart from "./images/cart.png"
-import search from "./images/search.png"
 
 const Header = () => {
 return (
@@ -13,19 +12,12 @@ return (
 <div className = {styles.header__searchPanel}>
 
 <div className = {styles.header__searchPanelContainer}>
-   <p><form сlassName= {styles.header__searchForm} action="">
+   <form  action="">
    <input placeholder="search..." type="text"  className = {styles.header__searchArea}/>
    <button className= {styles.header__buttonSearch}>Find</button>
-   </form></p>
+   </form>
       </div>
-{ /*<div className = {styles.header__searchPanelContainer}>
 
-
-<form сlassName= {styles.header__searchForm} action="">
-<input type="text"  className = {styles.header__searchArea}/>
-<button className= {styles.header__buttonSearch}><img src={search}/></button>
-</form>
-</div> */ }
 </div>
 
 <div className={styles.header__cart}>

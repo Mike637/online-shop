@@ -33,23 +33,29 @@ font-style:italic;
     align-items: center;
     width:60%;
     height:25px;
+}
 .header__searchPanelContainer
 {
     width:70%;
     text-align:center;
-    .header__searchArea,
-    .header__buttonSearch
-    {
-        border:2px solid red;
-    }
-    .header__searchArea
-    {
+}
+.header__searchArea,
+.header__buttonSearch
+{
+border:2px solid red;
+}
+.header__searchArea
+{
         width:70%;
         border-radius:5px  0 0 5px;
         background-color:#E0E0E0;
-    }
-    .header__buttonSearch
+ &:focus
  {
+    outline:none;
+ }
+}
+.header__buttonSearch
+{
 width:20%;
 border-radius:0  5px 5px 0;
 background-color:red;
@@ -69,15 +75,15 @@ border:2px solid violet;
 
 
 
-}
-}
+
 
 .header__cart
 {
 
-width:4%;
+width:4vw;
 position:relative;
 padding:0 5%;
+}
 .header__buttonCart
 {
 border:none;
@@ -90,6 +96,7 @@ opacity:0.3
 {
 cursor:pointer;
 }
+}
 .header__quantityBlock {
 position:absolute;
 background-color:red;
@@ -98,27 +105,48 @@ height:40%;
 border-radius:50%;
 top:0;
 left:55%;
+display:flex;
+align-items: center;
+justify-content: center;
+}
 .header__quatityNumber
 {
-font-weight:bold
-}
-}
-}
-/* this is popub hint styles
-.header__popupHint
-{
-    display:none;
-position:absolute;
-font-size:0.8em;
-border:2px solid blue;
-background-color:white;
-left:0;
-top:50px;
-}
-*/
+font-weight:bolder;
+
 }
 
-.header__searchPanel
+@media screen and (max-width:1200px)
 {
+    .header__quantityBlock
+    {
+font-size:calc(0.8em + (1 - 0.8) * (100vw - 320px)/(1200 - 320));
+}
+}
+
+@media screen and  (max-width: 480px)
+{
+    .header__searchArea
+    {
+width:60%;
+    }
+    .header__buttonSearch
+    {
+width:30%;
+    }
+}
+
+@media screen and (max-width:600px)
+{
+    .header__cart
+    {
+        width:7vw;
+    }
+
+    .header__quantityBlock
+    {
+        width:15%;
+        height:40%;
+        top:0;
+    }
 
 }
