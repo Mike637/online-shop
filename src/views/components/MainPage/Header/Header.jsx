@@ -1,8 +1,10 @@
 import React  from 'react'
 import  styles from "./header.module.scss"
 import cart from "./images/cart.png"
+import { useDispatch,useSelector } from 'react-redux'
 
 const Header = () => {
+
 return (
    <header className={styles.header}>
    <div className = {styles.header__container}>
@@ -24,17 +26,10 @@ return (
 <button className={styles.header__buttonCart}>
 <img src={cart}/>
 <div className={styles.header__quantityBlock}>
-<p className={styles.header__quatityNumber}>1</p>
+<p className={styles.header__quatityNumber}>18</p>
 </div>
 </button>
-{/* this is a popub hint
- <div className = {styles.header__popupHint}>
-<p>перейти в корзину</p>
-</div>   */}
-
-
 </div>
-
 </div>
    </header>
 )
