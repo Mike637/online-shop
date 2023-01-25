@@ -1,0 +1,22 @@
+{
+    "env" :{
+        "browser":true
+    },
+    "parser": "@babel/eslint-parser",
+    "extends": ["airbnb"],
+    "rules": {
+      "max-len": [1, 70, 2, { "ignoreComments": true }],
+      "no-unused-vars": "warn",
+      "no-shadow": "off",
+      "linebreak-style":0,
+      "global-require":0,
+      "eslint linebreak-style":[0,"error","windows"],
+      "object-curly-newline": "off"
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+          "experimentalObjectRestSpread": true
+        }
+      }
+}
