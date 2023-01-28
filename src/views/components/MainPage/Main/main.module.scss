@@ -10,6 +10,7 @@ padding:15% 2% 0 2%;
 display:flex;
 align-items: center;
 justify-content:space-between;
+flex-wrap:wrap;
 }
 
 .main__good
@@ -34,3 +35,29 @@ transition:transform 0.5s;
 }
 }
 
+.main__tringleLeft
+{
+/*
+width:0;
+height:0;
+border-top:50px solid transparent;
+border-left:100px solid transparent;
+border-bottom:50px solid green;
+*/
+
+width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-left: 16px solid green;
+	border-bottom: 8px solid transparent;
+
+}
+
+.main__tringleRight
+{
+    width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-right: 16px solid green;
+	border-bottom: 8px solid transparent;
+}

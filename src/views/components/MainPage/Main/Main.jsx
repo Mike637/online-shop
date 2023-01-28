@@ -1,15 +1,15 @@
 import React from 'react'
-import { Router ,Link } from "react-router-dom"
+import { Router ,Link, Routes,Route } from "react-router-dom"
 import styles from './main.module.scss'
 import  mercedesBenz from './images/mercedesBenz.jpg'
 import  bmwI8 from './images/bmwI8.jpg'
 import  bmwM5 from './images/bmwM5.jpg'
 import  lamborgini from './images/lamborgini.jpg'
 
-const imageArray = [{id:1,name:mercedesBenz},
-    {id:2,name:bmwI8},
-{id:3,name:bmwM5},
-{id:4,name:lamborgini}
+const imageArray = [{id:1,path:mercedesBenz,name:"mercedesBenz",price:400},
+    {id:2,path:bmwI8,name:"bmwI8",price:200},
+{id:3,path:bmwM5,name:"bmwM5",price:150},
+{id:4,path:lamborgini,name:"lamborgini",price:320}
 
 ]
 
@@ -22,25 +22,36 @@ const Main = () => {
 <div className ={styles.main__goodsList}>
 
 {
+
 imageArray.map(img =>
 <div className = {styles.main__good}>
-<Router>
-    <Link to="/">
 <div className = {styles.main__goodImage}>
-<img src={img.name} alt='picture_is_not_found' />
+<img src={img.path} alt='picture_is_not_found' />
 </div>
-</Link>
-</Router>
 <div className ={styles.main__goodText}>
-    <p>Здесь будут кнопки</p>
+ <p>{img.name}</p>
+ <p>{img.price}</p>
+<button>Добавить в корзину</button>
+<div className={styles.main__quanity}>
+<button>
+    <div className={styles.main__tringleLeft}></div>
+</button>
+<button><div>18</div></button>
+<button>
+<div className={styles.main__tringleRight}></div>
+</button>
+</div>
+
+
 </div>
 </div>
 )
 }
+</div>
+</div>
 
-</div>
-</div>
 </main>
+
 )
 }
 
