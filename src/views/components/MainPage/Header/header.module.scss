@@ -79,10 +79,8 @@ border:2px solid violet;
 
 .header__cart
 {
-
 width:4vw;
 position:relative;
-padding:0 5%;
 }
 .header__buttonCart
 {
@@ -100,11 +98,11 @@ cursor:pointer;
 .header__quantityBlock {
 position:absolute;
 background-color:red;
-width:10%;
+width:40%;
 height:40%;
 border-radius:50%;
 top:0;
-left:55%;
+left:60%;
 display:flex;
 align-items: center;
 justify-content: center;
@@ -112,7 +110,6 @@ justify-content: center;
 .header__quatityNumber
 {
 font-weight:bolder;
-
 }
 
 @media screen and (max-width:1200px)
@@ -144,7 +141,7 @@ width:30%;
 
     .header__quantityBlock
     {
-        width:15%;
+        width:40%;
         height:40%;
         top:0;
     }

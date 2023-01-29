@@ -16,8 +16,8 @@ flex-wrap:wrap;
 
 .main__good
 {
-border:2px solid red;
 margin:0 0 5% 0;
+background-color:#808080;
 }
 
 .main__goodText
@@ -53,7 +53,7 @@ transition:transform 0.5s;
 text-align: center;
 margin:4% 0;
 }
-.main_editQuantity
+.main__editQuantity
 {
     display:flex;
     align-items: center;
@@ -64,25 +64,68 @@ margin:0 auto;
 
 }
 
-.main__tringleLeft
+
+.main__minusQuantity,
+.main__plusQuantity
 {
-
-
-width: 0;
+    width: 0;
 	height: 0;
-	border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+}
+.main__minusQuantity
+{
 	border-left: 16px solid green;
-	border-bottom: 8px solid transparent;
-
 }
 
 
 
-.main__tringleRight
+.main__plusQuantity
 {
-    width: 0;
-	height: 0;
-	border-top: 8px solid transparent;
-	border-right: 16px solid green;
-	border-bottom: 8px solid transparent;
+             	border-right: 16px solid green;
+}
+
+.main__QuantityNumber,
+.main__name,
+.main__price,
+.main__addToCartButton
+{
+font-weight:bold;
+color:white;
+}
+
+.main__plusQuantityButton,
+.main__minusQuantityButton,
+.main__QuantityNumberButton,
+.main__addToCartButton
+{
+    background-color:#2A6478;
+    border-radius:5%;
+    border:none;
+    &:hover
+    {
+cursor:pointer;
+    }
+    &:active
+    {
+        background-color: red;
+    }
+}
+
+.main__addToCartButton
+{
+width:60%;
+height:25px;
+}
+
+@media (max-width:500px)
+{
+    .main__goodsList
+    {
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    }
 }

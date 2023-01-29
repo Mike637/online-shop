@@ -12,15 +12,15 @@ import  porsche911 from './images/porsche911.jpg'
 import  lamborgini from './images/lamborgini.jpg'
 
 const imageArray = [
-    {id:1,path:mercedesBenz,name:"mercedesBenz",price:400},
-    {id:2,path:bmwI8,name:"bmwI8",price:200},
-{id:3,path:bmwM5,name:"bmwM5",price:150},
-{id:4,path:bmwE34,name:"bmwE34",price:320},
-{id:5,path:bmwVision,name:"bmwVision",price:300},
-{id:6,path:mitsubishiLancer,name:"mitsubishiLancer",price:450},
-{id:7,path:nissanGtr,name:"nissanGtr",price:1000},
-{id:8,path:porsche911 ,name:"porsche911",price:180},
-{id:9,path:lamborgini,name:"lamborgini",price:310}
+    {id:1,path:mercedesBenz,name:"MercedesBenz",price:400},
+    {id:2,path:bmwI8,name:"BmwI8",price:200},
+{id:3,path:bmwM5,name:"BmwM5",price:150},
+{id:4,path:bmwE34,name:"BmwE34",price:320},
+{id:5,path:bmwVision,name:"BmwVision",price:300},
+{id:6,path:mitsubishiLancer,name:"MitsubishiLancer",price:450},
+{id:7,path:nissanGtr,name:"NissanGtr",price:1000},
+{id:8,path:porsche911 ,name:"Porsche911",price:180},
+{id:9,path:lamborgini,name:"Lamborgini",price:310}
 ]
 
 
@@ -42,19 +42,17 @@ imageArray.map(img =>
  <p className={styles.main__name}>{img.name}</p>
  <p className={styles.main__price}>{`${img.price}$`}</p>
  <div className={styles.main__addToCart}>
-<button >Добавить в корзину</button>
+<button  className={styles.main__addToCartButton}>Add to cart</button>
 </div>
-<div className={styles.main_editQuantity}>
-<button>
-    <div className={styles.main__tringleRight}></div>
+<div className={styles.main__editQuantity}>
+<button className={styles.main__plusQuantityButton}>
+    <div className={styles.main__plusQuantity}></div>
 </button>
-<button><div className={styles.main__QuantityNumber}>18</div></button>
-<button>
-<div className={styles.main__tringleLeft}></div>
+<button className = {styles.main__QuantityNumberButton}><div className={styles.main__QuantityNumber}>18</div></button>
+<button className={styles.main__minusQuantityButton}>
+<div className={styles.main__minusQuantity}></div>
 </button>
 </div>
-
-
 </div>
 </div>
 )
