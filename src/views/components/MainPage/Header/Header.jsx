@@ -1,9 +1,24 @@
-import React  from 'react'
+import React, {useState}  from 'react'
 import  styles from "./header.module.scss"
 import cart from "./images/cart.png"
 import { useDispatch,useSelector } from 'react-redux'
+import {setValue} from "../../../reducers/searchReducer.js"
 
 const Header = () => {
+
+const [inputText,setInputText] = useState("")
+const dispatch = useDispatch()
+const value = useSelector(state=>state.search.value)
+console.log(value)
+const onClick = (e) => {
+e.preventDefault()
+dispatch(setValue(inputText))
+console.log(value)
+}
+
+const onChange = e =>  {
+   setInputText(e.target.value)
+}
 
 return (
    <header className={styles.header}>
@@ -15,8 +30,8 @@ return (
 
 <div className = {styles.header__searchPanelContainer}>
    <form  action="">
-   <input placeholder="search..." type="text"  className = {styles.header__searchArea}/>
-   <button className= {styles.header__buttonSearch}>Find</button>
+   <input placeholder="search..." type="text" onChange={onChange} className = {styles.header__searchArea}/>
+   <button onClick ={onClick} className= {styles.header__buttonSearch}>Find</button>
    </form>
       </div>
 
@@ -31,6 +46,7 @@ return (
 </button>
 </div>
 </div>
+<p>{value}</p>
    </header>
 )
 }

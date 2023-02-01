@@ -26,6 +26,7 @@ const imageArray = [
 
 
 const Main = () => {
+
     return (
 <main className= {styles.main}>
 <div className = {styles.main__container}>
