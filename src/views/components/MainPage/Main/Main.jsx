@@ -13,7 +13,7 @@ import  lamborgini from './images/lamborgini.jpg'
 import { useDispatch,useSelector } from 'react-redux'
 import {setGoods} from "../../../reducers/getGoodsReducer.js"
 
-
+console.log(mercedesBenz)
 const imageArray = [
     {id:1,path:mercedesBenz,name:"MercedesBenz",price:400},
     {id:2,path:bmwI8,name:"BmwI8",price:200},

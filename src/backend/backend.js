@@ -13,7 +13,7 @@ app.get("", (req,res) => {
 res.json({
 
 goods:[
-    {id:1,path:mercedesBenz,name:"MercedesBenz",price:400},
+    {id:1,path:'http://localhost:3000/mercedesBenz.jpg',name:"MercedesBenz",price:400},
 ]
 })
 })
