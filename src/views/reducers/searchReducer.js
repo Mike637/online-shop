@@ -1,7 +1,9 @@
+
+
 const SET_VALUE = "SET_VALUE";
 
 const defaultState = {
-    value:"Hello world"
+    value:"",
 }
 
 

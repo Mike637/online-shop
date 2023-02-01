@@ -4,9 +4,11 @@ import { configureStore } from '@reduxjs/toolkit'
 import { combineReducers } from "redux"
 import { composeWithDevTools } from 'redux-devtools-extension'
 import {searchReducer} from './searchReducer'
+import {getGoodsReducer} from './getGoodsReducer.js'
 
 const mainReducer = combineReducers({
-    search:searchReducer
+    search:searchReducer,
+    getGoods:getGoodsReducer
 })
 
 const store = configureStore({reducer:mainReducer},composeWithDevTools(applyMiddleware(thunk)))

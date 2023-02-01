@@ -46,7 +46,6 @@ return (
 </button>
 </div>
 </div>
-<p>{value}</p>
    </header>
 )
 }
