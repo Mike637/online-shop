@@ -3,7 +3,12 @@
         "browser":true
     },
     "parser": "@babel/eslint-parser",
-    "extends": ["airbnb"],
+    "extends": [
+      "airbnb",
+      "eslint:recommended",
+      "plugin:react/recommended"
+  ],
+
     "rules": {
       "max-len": [1, 70, 2, { "ignoreComments": true }],
       "no-unused-vars": "warn",
@@ -11,12 +16,14 @@
       "linebreak-style":0,
       "global-require":0,
       "eslint linebreak-style":[0,"error","windows"],
-      "object-curly-newline": "off"
+      "object-curly-newline": "off",
+      "semi": [2, "never"]
     },
     "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {
-          "experimentalObjectRestSpread": true
+          "experimentalObjectRestSpread": true,
+          "babelOptions":{"configFile":"./babel.config.js"}
         }
       }
 }
