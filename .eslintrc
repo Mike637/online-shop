@@ -17,7 +17,9 @@
       "global-require":0,
       "eslint linebreak-style":[0,"error","windows"],
       "object-curly-newline": "off",
-      "semi": [2, "never"]
+      "semi": [2, "never"],
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+      "default-param-last": 0
     },
     "parserOptions": {
         "ecmaVersion": 6,

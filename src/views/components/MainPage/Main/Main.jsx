@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { Router ,Link, Routes,Route } from "react-router-dom"
 import styles from './main.module.scss'
 import  mercedesBenz from './images/mercedesBenz.jpg'

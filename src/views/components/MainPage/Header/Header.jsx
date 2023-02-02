@@ -1,19 +1,17 @@
 import React, {useState}  from 'react'
-import  styles from "./header.module.scss"
-import cart from "./images/cart.png"
+import  styles from './header.module.scss'
+import cart from './images/cart.png'
 import { useDispatch,useSelector } from 'react-redux'
-import {setValue} from "../../../reducers/searchReducer.js"
+import { setValue } from '../../../reducers/searchReducer'
 
 const Header = () => {
 
 const [inputText,setInputText] = useState("")
 const dispatch = useDispatch()
 const value = useSelector(state=>state.search.value)
-console.log(value)
 const onClick = (e) => {
 e.preventDefault()
 dispatch(setValue(inputText))
-console.log(value)
 }
 
 const onChange = e =>  {
@@ -21,7 +19,7 @@ const onChange = e =>  {
 }
 
 return (
-   <header className={styles.header}>
+  <header className={styles.header}>
    <div className = {styles.header__container}>
 <div className = {styles.header__logo}>
  Online store

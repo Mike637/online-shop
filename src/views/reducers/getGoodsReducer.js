@@ -3,7 +3,7 @@ const defaultState = {
   goods: [],
 }
 
-export const getGoodsReducer = (action, state = defaultState) => {
+export const getGoodsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case SET_GOODS:
       return { ...state, goods: action.payload }
