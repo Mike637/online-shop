@@ -7,7 +7,7 @@
     "build": "webpack --config webpack.config.js",
     "start": "webpack-dev-server --open",
     "backend": "node src/backend/backend.js",
-    "fullstack": "webpack --config webpack.config.js && node src/backend/backend.js"
+    "fullstack": "concurrently \" npm run start\"  \" npm run backend\""
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "@reduxjs/toolkit": "^1.9.1",
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
+    "concurrently": "^7.6.0",
     "css-loader": "^6.7.3",
     "eslint": "^8.32.0",
     "eslint-config-airbnb": "^19.0.4",
