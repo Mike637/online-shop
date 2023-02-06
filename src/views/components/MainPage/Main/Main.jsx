@@ -12,8 +12,8 @@ import  porsche911 from './images/porsche911.jpg'
 import  lamborgini from './images/lamborgini.jpg'
 import { useDispatch,useSelector } from 'react-redux'
 import {setGoods} from "../../../reducers/getGoodsReducer.js"
+import  getJson  from "../../../actions/goods"
 
-console.log(mercedesBenz)
 const imageArray = [
     {id:1,path:mercedesBenz,name:"MercedesBenz",price:400},
     {id:2,path:bmwI8,name:"BmwI8",price:200},
@@ -26,17 +26,13 @@ const imageArray = [
 {id:9,path:lamborgini,name:"Lamborgini",price:310}
 ]
 
-
+getJson()
 
 const Main = () => {
 
-    const dispatch = useDispatch()
-    const goods =  useSelector(state => state.getGoods.goods)
-
-
-
-    useEffect( () =>  dispatch(setGoods(imageArray)),[])
-
+  const dispatch = useDispatch()
+   const goods =  useSelector(state => state.getGoods.goods)
+  useEffect( () =>  dispatch(setGoods(imageArray)),[])
 
 
 

@@ -7,7 +7,6 @@ const MainPage = () =>
 {
 return (
 <>
-
 <Header/>
 <Main/>
 <Footer/>

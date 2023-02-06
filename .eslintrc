@@ -3,6 +3,11 @@
         "browser":true
     },
     "parser": "@babel/eslint-parser",
+    "settings": {
+      "react": {
+          "version": "detect"
+      }
+  },
     "extends": [
       "airbnb",
       "eslint:recommended",
@@ -19,7 +24,10 @@
       "object-curly-newline": "off",
       "semi": [2, "never"],
       "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-      "default-param-last": 0
+      "default-param-last": 0,
+      "arrow-body-style":0,
+      "brace-style":0,
+      "no-console":0
     },
     "parserOptions": {
         "ecmaVersion": 6,
