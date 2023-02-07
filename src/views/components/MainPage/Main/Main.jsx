@@ -25,6 +25,7 @@ const imageArray = [
 {id:8,path:porsche911 ,name:"Porsche911",price:180},
 {id:9,path:lamborgini,name:"Lamborgini",price:310}
 ]
+/* getJson Function is not working correctly  */
 
 getJson()
 
@@ -33,8 +34,6 @@ const Main = () => {
   const dispatch = useDispatch()
    const goods =  useSelector(state => state.getGoods.goods)
   useEffect( () =>  dispatch(setGoods(imageArray)),[])
-
-
 
     return (
 <main className= {styles.main}>
