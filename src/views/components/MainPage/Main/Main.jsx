@@ -26,6 +26,7 @@ const imageArray = [
 {id:9,path:lamborgini,name:"Lamborgini",price:310}
 ]
 
+
 getJson()
 
 const Main = () => {
